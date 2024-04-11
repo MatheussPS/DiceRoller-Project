@@ -18,7 +18,7 @@
                 Text=""
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" 
-                FontSize="30"
+                FontSize="35"
                 FontAttributes="Bold"/>
 
 

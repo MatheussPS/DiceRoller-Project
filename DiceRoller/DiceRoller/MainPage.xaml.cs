@@ -18,9 +18,9 @@
             {
                 int selectedIndex = picker.SelectedIndex;
 
-                string pickerValue = Convert.ToString(picker.ItemsSource[selectedIndex]);
+                int pickerValue = Convert.ToInt32(picker.ItemsSource[selectedIndex]);
 
-                int sortedNumber = random.Next(1, Convert.ToInt32(pickerValue));
+                int sortedNumber = random.Next(1, pickerValue+1);
 
                 sorted_NumberLabel.Text = Convert.ToString(sortedNumber);
             }
