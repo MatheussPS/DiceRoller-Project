@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRoller.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                Text="ROLADOR DE DADOS"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="30"
+                FontAttributes="Bold"/>
+
+            <Label x:Name="sorted_NumberLabel"
+                Text=""
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" 
+                FontSize="30"
+                FontAttributes="Bold"/>
+
+
+            <Picker x:Name="qtd_LadosPicker"
+                Title="Quantidade de lados">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>10</x:String>
+                        <x:String>20</x:String>
+                        <x:String>100</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button
+                x:Name="sort_NumberBtn"
+                Text="Rolar Dado" 
+                SemanticProperties.Hint="Executa a função de rolagem de dados"
+                Clicked="sort_NumberBtn_Clicked"
+                HorizontalOptions="Fill"
+                BackgroundColor="#363636"
+                TextColor="#FFF"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
